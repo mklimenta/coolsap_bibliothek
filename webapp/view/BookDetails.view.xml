@@ -1,0 +1,47 @@
+<mvc:View controllerName="net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookDetails" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>Book Details}">
+					<content>
+						<List
+							binding="{/books/0}">
+							<DisplayListItem
+								label="ID"
+								value="{id}" />
+							<DisplayListItem
+								label="ISBN"
+								value="{isbn}" />
+							<DisplayListItem
+								label="Title"
+								value="{title}" />
+							<DisplayListItem
+								label="Author"
+								value="{author}" />
+							<DisplayListItem
+								label="Year"
+								value="{year}" />
+							<DisplayListItem
+								label="Edition"
+								value="{edition}" />
+							<DisplayListItem
+								label="Publisher"
+								value="{publisher}" />
+							<DisplayListItem
+								label="Language"
+								value="{language}" />
+							<DisplayListItem
+								label="Category"
+								value="{category}" />
+							<DisplayListItem
+								label="Available Count"
+								value="{available_count}" />
+							<DisplayListItem
+								label="Lent Count"
+								value="{lent_count}" />
+						</List>
+					</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

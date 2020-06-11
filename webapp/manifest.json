@@ -39,7 +39,7 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "net.bounceme.monkeyCoolSAP-Bibliothek.view.View1",
+			"viewName": "net.bounceme.monkeyCoolSAP-Bibliothek.view.BookDetails",
 			"type": "XML"
 		},
 		"dependencies": {
