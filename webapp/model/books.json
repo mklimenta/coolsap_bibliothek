@@ -1,0 +1,43 @@
+{
+	"books": [
+		{
+			"id": 0,
+			"isbn": "0806502517",
+			"title": "The Diary Of Soren Kierkegaard",
+			"author": "Soren Kierkegaard",
+			"year": 2020,
+			"edition": "1",
+			"publisher": "Citadel",
+			"language": "English",
+			"category": "Philosophy",
+			"available_count": 4,
+			"lent_count": 2
+		},
+		{
+			"id": 1,
+			"isbn": "9780521542265",
+			"title": "Clinical Physiology",
+			"author": "Ashis Banerjee",
+			"year": 2005,
+			"edition": "1",
+			"publisher": "Cambridge University",
+			"language": "English",
+			"category": "Medicine",
+			"available_count": 2,
+			"lent_count": 0
+		},
+		{
+			"id": 2,
+			"isbn": "1429203461",
+			"title": "The Social Animal",
+			"author": "Elliot Aronson",
+			"year": 2018,
+			"edition": "12",
+			"publisher": "Worth Publishers",
+			"language": "English",
+			"category": "Psychology",
+			"available_count": 0,
+			"lent_count": 3
+		}
+	]
+}
