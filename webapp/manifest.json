@@ -64,6 +64,11 @@
 				"settings": {
 					"bundleName": "net.bounceme.monkeyCoolSAP-Bibliothek.i18n.i18n"
 				}
+			},
+			"books": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/books.json",
+				"preload": true
 			}
 		},
 		"resources": {
