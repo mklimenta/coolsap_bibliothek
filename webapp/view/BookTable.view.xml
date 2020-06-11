@@ -1,0 +1,33 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookTable">
+	<Table id="bookTable" headerText="{i18n>bookTableTitle}" class="sapUiResponsiveMargin" width="auto"
+		items="{ path : 'books>/books', sorter : { path : 'category', group : true } }">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="{i18n>bookTableTitle}"/>
+				<ToolbarSpacer/>
+				<SearchField width="25%" search=".onFilterBooks"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<Text text="Title"/>
+			</Column>
+			<Column>
+				<Text text="Author"/>
+			</Column>
+			<Column>
+				<Text text="Available"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{books>title}"/>
+					<Text text="{books>author}"/>
+					<ObjectNumber number="{books>available_count}" unit="books"
+						state="{= 3 > ${books>available_count} ? 'Error' : 'Success' }"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>
