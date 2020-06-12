@@ -31,6 +31,14 @@ sap.ui.define([
 			var oList = this.byId("bookTable");
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
+		},
+		
+		onEntryPress: function(oEvent){
+			var oItem = oEvent.getSource();
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("detail", {
+				bookId: window.encodeURIComponent(oItem.getBindingContext("books").getPath().substr(1))
+			});
 		}
 
 	});
