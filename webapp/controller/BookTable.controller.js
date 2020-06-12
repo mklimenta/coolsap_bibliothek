@@ -9,8 +9,7 @@ sap.ui.define([
 	return Controller.extend("net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookTable", {
 
 		onInit: function() {
-			var oViewModel = new JSONModel();
-			this.getView().setModel(oViewModel, "view");
+			this.getView().setModel(this.getOwnerComponent().getModel("books"));
 		},
 
 		onFilterBooks: function(oEvent) {

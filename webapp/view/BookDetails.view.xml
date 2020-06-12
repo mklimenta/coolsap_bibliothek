@@ -2,7 +2,7 @@
 	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
-			<Page title="{i18n>Book Details}">
+			<Page title="{i18n>bookDetailsTitle}">
 					<content>
 						<List>
 							<DisplayListItem
@@ -39,6 +39,8 @@
 								label="Lent Count"
 								value="{books>lent_count}" />
 						</List>
+						<Button press=".onBorrow" text="Borrow"></Button>
+						<Button press=".onReturn" text="Return"></Button>
 					</content>
 			</Page>
 		</pages>
