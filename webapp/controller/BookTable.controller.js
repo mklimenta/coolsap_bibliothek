@@ -31,6 +31,22 @@ sap.ui.define([
 			var oList = this.byId("bookTable");
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
+		},
+		 
+		_getDialog : function () {
+        	if (!this._oDialog) {
+            	this._oDialog = sap.ui.xmlfragment("net.bounceme.monkeyCoolSAP-Bibliothek.view.Dialog");
+            	this.getView().addDependent(this._oDialog);
+        	}
+         return this._oDialog;
+    	},
+    	
+    	onOpenDialog : function () {
+        	this._getDialog().open();
+    	},
+    	
+		onCloseDialog : function () {
+			this._getDialog().close();
 		}
 
 	});
