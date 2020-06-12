@@ -69,8 +69,42 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/books.json",
 				"preload": true
+			}	
+		},
+		
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "net.bounceme.monkeyCoolSAP-Bibliothek.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [
+				{
+				  "pattern": "",
+				  "name": "overview",
+				  "target": "overview"
+				},
+				{
+				  "pattern": "detail/{bookId}",
+				  "name": "detail",
+				  "target": "detail"
+				}
+			],
+			"targets": {
+				"overview": {
+				  "viewId": "BookTable",
+				  "viewName": "BookTable"
+				},
+				"detail": {
+				  "viewId": "BookDetails",
+				  "viewName": "BookDetails"
+				}
 			}
 		},
+		
 		"resources": {
 			"css": [{
 				"uri": "css/style.css"
