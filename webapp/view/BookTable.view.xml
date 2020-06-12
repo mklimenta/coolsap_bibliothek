@@ -7,8 +7,8 @@
 				<ToolbarSpacer/>
 				<Button
         			text="{i18n>openDialogButtonText}"
-        			press="onOpenDialog"
-        			class="sapUiSmallMarginEnd"/>
+        			press=".onOpenDialog"
+            		class="sapUiSmallMarginEnd"/>
 				<SearchField width="25%" search=".onFilterBooks"/>
 			</Toolbar>
 		</headerToolbar>

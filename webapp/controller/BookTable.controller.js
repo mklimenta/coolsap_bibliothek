@@ -32,7 +32,7 @@ sap.ui.define([
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
 		},
-		 
+		
 		_getDialog : function () {
         	if (!this._oDialog) {
             	this._oDialog = sap.ui.xmlfragment("net.bounceme.monkeyCoolSAP-Bibliothek.view.Dialog");
@@ -45,9 +45,12 @@ sap.ui.define([
         	this._getDialog().open();
     	},
     	
-		onCloseDialog : function () {
-			this._getDialog().close();
-		}
-
+    	onCloseDialog : function () {
+        	this._oDialog = sap.ui.xmlfragment("net.bounceme.monkeyCoolSAP-Bibliothek.view.Dialog");
+            this.getView().getController();
+			this._oDialog.close();
+			/*eslint-disable no-console, no-alert */
+			alert("hello");
+    	}
 	});
 });
