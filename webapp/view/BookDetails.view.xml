@@ -6,9 +6,6 @@
 					<content>
 						<List>
 							<DisplayListItem
-								label="ID"
-								value="{books>id}" />
-							<DisplayListItem
 								label="ISBN"
 								value="{books>isbn}" />
 							<DisplayListItem

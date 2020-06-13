@@ -1,7 +1,6 @@
 {
 	"books": [
 		{
-			"id": 0,
 			"isbn": "0806502517",
 			"title": "The Diary Of Soren Kierkegaard",
 			"author": "Soren Kierkegaard",
@@ -14,7 +13,6 @@
 			"lent_count": 2
 		},
 		{
-			"id": 1,
 			"isbn": "9780521542265",
 			"title": "Clinical Physiology",
 			"author": "Ashis Banerjee",
@@ -27,7 +25,6 @@
 			"lent_count": 0
 		},
 		{
-			"id": 2,
 			"isbn": "1429203461",
 			"title": "The Social Animal",
 			"author": "Elliot Aronson",

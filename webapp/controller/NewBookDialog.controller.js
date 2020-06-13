@@ -3,7 +3,7 @@ sap.ui.define([
 	'sap/ui/model/json/JSONModel'
 ], function(Controller, JSONModel) {
 	"use strict";
-	return Controller.extend("net.bounceme.monkeyCoolSAP-Bibliothek.controller.Dialog", {
+	return Controller.extend("net.bounceme.monkeyCoolSAP-Bibliothek.controller.NewBookDialog", {
 		
 		 	onInit: function () {
 				var sPath = $.sap.getModulePath("net.bounceme.monkeyCoolSAP-Bibliothek", "/model/books.json");

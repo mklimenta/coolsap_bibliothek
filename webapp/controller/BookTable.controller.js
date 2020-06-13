@@ -35,7 +35,7 @@ sap.ui.define([
 		
     	_getDialog : function () {
         	if (!this._oDialog) {
-            	this._oDialog = sap.ui.xmlfragment("net.bounceme.monkeyCoolSAP-Bibliothek.view.Dialog", this);
+            	this._oDialog = sap.ui.xmlfragment("net.bounceme.monkeyCoolSAP-Bibliothek.view.NewBookDialog", this);
         		this.getView().addDependent(this._oDialog);
         	}
         	return this._oDialog;
@@ -68,8 +68,6 @@ sap.ui.define([
 				var moreData = [];
 				var oneMoreEntity= {};
 
-				var id = 3;
-				oneMoreEntity['id']= id++;
 				oneMoreEntity['isbn']= isbn;
 				oneMoreEntity['title']= title;
 				oneMoreEntity['author']= author;
