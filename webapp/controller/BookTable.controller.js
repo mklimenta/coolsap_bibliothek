@@ -46,11 +46,8 @@ sap.ui.define([
     	},
     	
     	onCloseDialog : function () {
-        	this._oDialog = sap.ui.xmlfragment("net.bounceme.monkeyCoolSAP-Bibliothek.view.Dialog");
-            this.getView().getController();
-			this._oDialog.close();
-			/*eslint-disable no-console, no-alert */
-			alert("hello");
+        	this._getDialog().close();
     	}
+    	
 	});
 });

@@ -1,8 +1,7 @@
 <core:FragmentDefinition
    xmlns="sap.m"
    xmlns:core="sap.ui.core"
-   xmlns:mvc="sap.ui.core.mvc" 
-   controllerName="net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookTable">
+   xmlns:mvc="sap.ui.core.mvc">
    <Dialog id="dialog"
 		xmlns="sap.m"
 		xmlns:form="sap.ui.layout.form"
@@ -14,21 +13,21 @@
    	    <content>
    	    	<form:SimpleForm editable="true">
 				<Label text="ISBN" tooltip="ISBN"/>
-				<MaskInput value="{/isbn}" mask="9999-9999-9" placeholder="Enter ISBN" id="isbn"/>
+				<MaskInput value="{books>isbn}" mask="9999-9999-9" placeholder="Enter ISBN" id="isbn"/>
 				<Label text="Title" tooltip="Title"/>
-				<MaskInput value="{/title}" placeholder="Enter title">
+				<MaskInput value="{books>title}" placeholder="Enter title">
 				</MaskInput>
 				<Label text="Author" tooltip="Author"/>
-				<MaskInput value="{/author}" placeholder="Enter author">
+				<MaskInput value="{books>author}" placeholder="Enter author">
 				</MaskInput>
 				<Label text="Year" tooltip="Year"/>
-				<MaskInput value="{/year}" mask="999999" placeholder="Enter year">
+				<MaskInput value="{books>year}" mask="999999" placeholder="Enter year">
 				</MaskInput>
 				<Label text="Edition" tooltip="Edition"/>
-				<MaskInput value="{/edition}" placeholder="Enter edition">
+				<MaskInput value="{books>edition}" placeholder="Enter edition">
 				</MaskInput>
 				<Label text="Publisher" tooltip="Publisher"/>
-				<MaskInput value="{/publisher}" placeholder="Enter title">
+				<MaskInput value="{books>publisher}" placeholder="Enter title">
 				</MaskInput>
 				<Label text="Language" tooltip="Language"/>
 				<Select>
@@ -43,7 +42,7 @@
 					<core:Item text="IT" />
 				</Select>
 				<Label text="Available" tooltip="Available"/>
-				<MaskInput value="{/available_count}" mask="999999" placeholder="Enter amount">
+				<MaskInput value="{books>available_count}" mask="999999" placeholder="Enter amount">
 				</MaskInput>
 			</form:SimpleForm>
    	    </content>
