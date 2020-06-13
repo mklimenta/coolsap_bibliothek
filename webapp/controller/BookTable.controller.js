@@ -33,21 +33,20 @@ sap.ui.define([
 			oBinding.filter(aFilter);
 		},
 		
-		_getDialog : function () {
+    	_getDialog : function () {
         	if (!this._oDialog) {
-            	this._oDialog = sap.ui.xmlfragment("net.bounceme.monkeyCoolSAP-Bibliothek.view.Dialog");
-            	this.getView().addDependent(this._oDialog);
-        	}
+            	this._oDialog = sap.ui.xmlfragment("net.bounceme.monkeyCoolSAP-Bibliothek.view.Dialog", this);
+        		this.getView().addDependent(this._oDialog);
+         }
          return this._oDialog;
-    	},
-    	
-    	onOpenDialog : function () {
-        	this._getDialog().open();
-    	},
-    	
-    	onCloseDialog : function () {
-        	this._getDialog().close();
-    	}
-    	
+      },
+      
+      onOpenDialog : function () {
+         this._getDialog().open();
+      },
+      
+      onCloseDialog : function () {
+         this._getDialog().close();
+      }
 	});
 });

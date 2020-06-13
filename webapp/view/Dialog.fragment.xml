@@ -27,7 +27,7 @@
 				<MaskInput placeholder="Enter edition" id="edition">
 				</MaskInput>
 				<Label text="Publisher" tooltip="Publisher"/>
-				<MaskInput placeholder="Enter title" id="publisher">
+				<MaskInput placeholder="Enter publisher" id="publisher">
 				</MaskInput>
 				<Label text="Language" tooltip="Language"/>
 				<Select id="language">
