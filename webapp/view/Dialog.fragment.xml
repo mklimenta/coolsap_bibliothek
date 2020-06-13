@@ -13,41 +13,41 @@
    	    <content>
    	    	<form:SimpleForm editable="true">
 				<Label text="ISBN" tooltip="ISBN"/>
-				<MaskInput value="{books>isbn}" mask="9999-9999-9" placeholder="Enter ISBN" id="isbn"/>
+				<MaskInput  mask="9999-9999-9" placeholder="Enter ISBN" id="isbn"/>
 				<Label text="Title" tooltip="Title"/>
-				<MaskInput value="{books>title}" placeholder="Enter title">
+				<MaskInput placeholder="Enter title" id="title">
 				</MaskInput>
 				<Label text="Author" tooltip="Author"/>
-				<MaskInput value="{books>author}" placeholder="Enter author">
+				<MaskInput placeholder="Enter author" id="author">
 				</MaskInput>
 				<Label text="Year" tooltip="Year"/>
-				<MaskInput value="{books>year}" mask="999999" placeholder="Enter year">
+				<MaskInput mask="999999" placeholder="Enter year" id="year">
 				</MaskInput>
 				<Label text="Edition" tooltip="Edition"/>
-				<MaskInput value="{books>edition}" placeholder="Enter edition">
+				<MaskInput placeholder="Enter edition" id="edition">
 				</MaskInput>
 				<Label text="Publisher" tooltip="Publisher"/>
-				<MaskInput value="{books>publisher}" placeholder="Enter title">
+				<MaskInput placeholder="Enter title" id="publisher">
 				</MaskInput>
 				<Label text="Language" tooltip="Language"/>
-				<Select>
+				<Select id="language">
 					<core:Item text="English" />
 					<core:Item text="Deutsch" />
 				</Select>
 				<Label text="Category" tooltip="Category"/>
-				<Select>
+				<Select id="category">
 					<core:Item text="Philosophy" />
 					<core:Item text="Medicine" />
 					<core:Item text="Psychology" />
 					<core:Item text="IT" />
 				</Select>
 				<Label text="Available" tooltip="Available"/>
-				<MaskInput value="{books>available_count}" mask="999999" placeholder="Enter amount">
+				<MaskInput mask="999999" placeholder="Enter amount" id="available_count">
 				</MaskInput>
 			</form:SimpleForm>
    	    </content>
    	    <beginButton>
-   	    	<Button id="btn1" type="Accept" text="Save" press="onPress" />
+   	    	<Button id="btn1" type="Accept" text="Save" press=".onAddBook" />
    	    </beginButton>
 		<endButton>
     		<Button
