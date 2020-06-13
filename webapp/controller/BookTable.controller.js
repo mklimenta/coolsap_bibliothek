@@ -81,10 +81,12 @@ sap.ui.define([
 				oneMoreEntity['available_count']= available_count;
 				oneMoreEntity['lent_count']= 0;
 				
+				localdata.books.push(oneMoreEntity);
+				
 				model.setData(localdata, true);
 				/* eslint no-console: "error" */
 				console.log(model.getData());
-				
+		
 				this._getDialog().close();
 			},
 			
