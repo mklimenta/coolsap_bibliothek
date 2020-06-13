@@ -32,12 +32,11 @@ sap.ui.define([
 			var elementPath = this.getView().getElementBinding("books").getPath();
 			var availablePath = elementPath + "/available_count";
 			var lentPath = elementPath + "/lent_count";
-			var availableProperty = oModel.getProperty(availablePath);
-			var lentProperty = oModel.getProperty(lentPath);
+			var availableProperty = Number(oModel.getProperty(availablePath));
+			var lentProperty = Number(oModel.getProperty(lentPath));
 			if ((availableProperty + available) >= 0 && (lentProperty + lent) >= 0) {
 				oModel.setProperty(availablePath, availableProperty + available);
 				oModel.setProperty(lentPath, lentProperty + lent);
-				return;
 			}
 		}
 	});
