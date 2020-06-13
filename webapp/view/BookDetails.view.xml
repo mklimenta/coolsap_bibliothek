@@ -3,42 +3,25 @@
 	<App>
 		<pages>
 			<Page title="{i18n>bookDetailsTitle}">
-					<content>
-						<List>
-							<DisplayListItem
-								label="ISBN"
-								value="{books>isbn}" />
-							<DisplayListItem
-								label="Title"
-								value="{books>title}" />
-							<DisplayListItem
-								label="Author"
-								value="{books>author}" />
-							<DisplayListItem
-								label="Year"
-								value="{books>year}" />
-							<DisplayListItem
-								label="Edition"
-								value="{books>edition}" />
-							<DisplayListItem
-								label="Publisher"
-								value="{books>publisher}" />
-							<DisplayListItem
-								label="Language"
-								value="{books>language}" />
-							<DisplayListItem
-								label="Category"
-								value="{books>category}" />
-							<DisplayListItem
-								label="Available Count"
-								value="{books>available_count}" />
-							<DisplayListItem
-								label="Lent Count"
-								value="{books>lent_count}" />
-						</List>
-						<Button press=".onBorrow" text="Borrow"></Button>
-						<Button press=".onReturn" text="Return"></Button>
-					</content>
+				<content>
+					<List>
+						<DisplayListItem label="ISBN" value="{books>isbn}"/>
+						<DisplayListItem label="Title" value="{books>title}"/>
+						<DisplayListItem label="Author" value="{books>author}"/>
+						<DisplayListItem label="Year" value="{books>year}"/>
+						<DisplayListItem label="Edition" value="{books>edition}"/>
+						<DisplayListItem label="Publisher" value="{books>publisher}"/>
+						<DisplayListItem label="Language" value="{books>language}"/>
+						<DisplayListItem label="Category" value="{books>category}"/>
+						<DisplayListItem label="Available Count" value="{books>available_count}"/>
+						<DisplayListItem label="Lent Count" value="{books>lent_count}"/>
+					</List>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button press=".onBorrow" text="{i18n>bookBorrowButtonText}" width="12%"></Button>
+						<Button press=".onReturn" text="{i18n>bookReturnButtonText}" width="12%"></Button>
+					</Toolbar>
+				</content>
 			</Page>
 		</pages>
 	</App>
