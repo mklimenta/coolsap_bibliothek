@@ -24,7 +24,7 @@
 			</Column>
 		</columns>
 		<items>
-			<ColumnListItem>
+			<ColumnListItem press="onEntryPress" type="Navigation">
 				<cells>
 					<Text text="{books>title}"/>
 					<Text text="{books>author}"/>

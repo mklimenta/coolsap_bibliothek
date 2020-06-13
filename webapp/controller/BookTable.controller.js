@@ -10,8 +10,7 @@ sap.ui.define([
 	return Controller.extend("net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookTable", {
 
 		onInit: function() {
-			var oViewModel = new JSONModel();
-			this.getView().setModel(oViewModel, "view");
+			this.getView().setModel(this.getOwnerComponent().getModel("books"));
 		},
 
 		onFilterBooks: function(oEvent) {
@@ -87,6 +86,14 @@ sap.ui.define([
 				console.log(model.getData());
 				
 				this._getDialog().close();
-			}
+			},
+			
+		onEntryPress: function(oEvent){
+			var oItem = oEvent.getSource();
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("detail", {
+					bookId: window.encodeURIComponent(oItem.getBindingContext("books").getPath().substr(1))
+				});	
+		}
 	});
 });

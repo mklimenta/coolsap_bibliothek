@@ -2,44 +2,45 @@
 	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
-			<Page title="{i18n>Book Details}">
+			<Page title="{i18n>bookDetailsTitle}">
 					<content>
-						<List
-							binding="{/books/0}">
+						<List>
 							<DisplayListItem
 								label="ID"
-								value="{id}" />
+								value="{books>id}" />
 							<DisplayListItem
 								label="ISBN"
-								value="{isbn}" />
+								value="{books>isbn}" />
 							<DisplayListItem
 								label="Title"
-								value="{title}" />
+								value="{books>title}" />
 							<DisplayListItem
 								label="Author"
-								value="{author}" />
+								value="{books>author}" />
 							<DisplayListItem
 								label="Year"
-								value="{year}" />
+								value="{books>year}" />
 							<DisplayListItem
 								label="Edition"
-								value="{edition}" />
+								value="{books>edition}" />
 							<DisplayListItem
 								label="Publisher"
-								value="{publisher}" />
+								value="{books>publisher}" />
 							<DisplayListItem
 								label="Language"
-								value="{language}" />
+								value="{books>language}" />
 							<DisplayListItem
 								label="Category"
-								value="{category}" />
+								value="{books>category}" />
 							<DisplayListItem
 								label="Available Count"
-								value="{available_count}" />
+								value="{books>available_count}" />
 							<DisplayListItem
 								label="Lent Count"
-								value="{lent_count}" />
+								value="{books>lent_count}" />
 						</List>
+						<Button press=".onBorrow" text="Borrow"></Button>
+						<Button press=".onReturn" text="Return"></Button>
 					</content>
 			</Page>
 		</pages>
