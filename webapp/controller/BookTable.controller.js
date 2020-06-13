@@ -92,10 +92,10 @@ sap.ui.define([
 			
 		onEntryPress: function(oEvent){
 			var oItem = oEvent.getSource();
-				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				oRouter.navTo("detail", {
-					bookId: window.encodeURIComponent(oItem.getBindingContext("books").getPath().substr(1))
-				});	
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("detail", {
+				bookId: window.encodeURIComponent(oItem.getBindingContext("books").getPath().substr(1))
+			});	
 		}
 	});
 });

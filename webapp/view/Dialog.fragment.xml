@@ -29,26 +29,26 @@
                     width="100%"/>
 				<Label text="Year" tooltip="Year"/>
 				<Input
-                    placeholder="Enter year"
+                    placeholder="Enter publishing year"
                 	id="year" 
                     valueLiveUpdate="true"
                     width="100%"/>
 				<Label text="Edition" tooltip="Edition"/>
 				<Input
-                    placeholder="Enter edition"
+                    placeholder="Enter edition number"
                 	id="edition" 
                     valueLiveUpdate="true"
                     width="100%"/>
 				<Label text="Publisher" tooltip="Publisher"/>
 				<Input
-                    placeholder="Enter publisher"
+                    placeholder="Enter publisher name"
                 	id="publisher" 
                     valueLiveUpdate="true"
                     width="100%"/>
 				<Label text="Language" tooltip="Language"/>
 				<Select  id="language">
 					<core:Item text="English" />
-					<core:Item text="Deutsch" />
+					<core:Item text="German" />
 				</Select>
 				<Label text="Category" tooltip="Category"/>
 				<Select id="category">
@@ -58,7 +58,7 @@
 					<core:Item text="IT" />
 				</Select>
 				<Label text="Available" tooltip="Available"/>
-			<Input
+				<Input
                     placeholder="Enter amount"
                 	id="available_count" 
                     valueLiveUpdate="true"
