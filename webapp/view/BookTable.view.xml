@@ -6,6 +6,7 @@
 				<Title text="{i18n>bookTableTitle}"/>
 				<ToolbarSpacer/>
 				<Button
+					icon="sap-icon://add"
         			text="{i18n>openDialogButtonText}"
         			press=".onOpenDialog"
             		class="sapUiSmallMarginEnd"/>

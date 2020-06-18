@@ -1,8 +1,9 @@
 sap.ui.define([
 	'sap/ui/core/mvc/Controller',
 	'sap/ui/model/json/JSONModel',
-	"sap/ui/core/UIComponent"
-], function(Controller, JSONModel, UIComponent) {
+	"sap/ui/core/UIComponent",
+	"sap/ui/core/routing/History"
+], function(Controller, JSONModel, UIComponent, History) {
 	"use strict";
 
 	return Controller.extend("net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookDetails", {
@@ -47,6 +48,17 @@ sap.ui.define([
 			oRouter.navTo("edit", {
 				bookId: window.encodeURIComponent(oItem.getBindingContext("books").getPath().substr(1))
 			});	
+		},
+		
+		onBack: function(oEvent){
+			var oHistory = History.getInstance();
+			var sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				var oRouter = UIComponent.getRouterFor(this);
+				oRouter.navTo("overview");	
+			}
 		}
 	});
 });

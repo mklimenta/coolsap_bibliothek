@@ -62,7 +62,12 @@
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
 						<ToolbarSpacer/>
-						<Button id="btn1" type="Accept" text="{i18n>bookSaveText}" press=".onSaveBook"></Button>
+						<Button
+				            icon="sap-icon://nav-back"
+				            text="{i18n>bookBackText}"
+				            press=".onBack"
+				            class="sapUiSmallMarginEnd"/>
+						<Button id="btn1" type="Accept" icon="sap-icon://accept" text="{i18n>bookSaveText}" press=".onSaveBook"></Button>
 					</form:SimpleForm>
 				</content>
 			</Page>
