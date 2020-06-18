@@ -18,6 +18,7 @@
 					</List>
 					<Toolbar>
 						<ToolbarSpacer/>
+						<Button press=".onEntryPress" text="{i18n>bookEditText}" width="15%"></Button>
 						<Button press=".onBorrow" text="{i18n>bookBorrowButtonText}" width="12%"></Button>
 						<Button press=".onReturn" text="{i18n>bookReturnButtonText}" width="12%"></Button>
 					</Toolbar>

@@ -91,6 +91,11 @@
 				  "pattern": "detail/{bookId}",
 				  "name": "detail",
 				  "target": "detail"
+				},
+				{
+				  "pattern": "edit/{bookId}",
+				  "name": "edit",
+				  "target": "edit"
 				}
 			],
 			"targets": {
@@ -101,6 +106,10 @@
 				"detail": {
 				  "viewId": "BookDetails",
 				  "viewName": "BookDetails"
+				},
+				"edit": {
+				  "viewId": "BookEdit",
+				  "viewName": "BookEdit"
 				}
 			}
 		},
