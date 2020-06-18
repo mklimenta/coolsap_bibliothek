@@ -10,6 +10,8 @@ sap.ui.define([
 		onInit: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+			oRouter.getRoute("edit").attachPatternMatched(this._onObjectMatched, this);
+			
 		},
 
 		_onObjectMatched: function(oEvent) {
@@ -38,6 +40,14 @@ sap.ui.define([
 				oModel.setProperty(availablePath, availableProperty + available);
 				oModel.setProperty(lentPath, lentProperty + lent);
 			}
+		},
+		
+		onEntryPress: function(oEvent){
+			var oItem = oEvent.getSource();
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("edit", {
+				bookId: window.encodeURIComponent(oItem.getBindingContext("books").getPath().substr(1))
+			});	
 		}
 	});
 });
