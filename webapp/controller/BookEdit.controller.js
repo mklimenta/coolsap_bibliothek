@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	'sap/ui/model/json/JSONModel',
-	"sap/ui/core/UIComponent"
-], function(Controller, JSONModel, UIComponent) {
+	"sap/ui/core/UIComponent",
+	"sap/ui/core/routing/History"
+], function(Controller, JSONModel, UIComponent, History) {
 	"use strict";
 
 	return Controller.extend("net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookEdit", {
@@ -63,7 +64,19 @@ sap.ui.define([
 			var category = this.getView().byId("category").getSelectedItem().getText(); 
 			var available = this.getView().byId("available_count")._lastValue; 
 				
-			this._updateModel(isbn, title, author, year, edition, publisher, language, category, available);	
+			this._updateModel(isbn, title, author, year, edition, publisher, language, category, available);
+			
+			var oHistory = History.getInstance();
+			var sPreviousHash = oHistory.getPreviousHash();
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				var oRouter = UIComponent.getRouterFor(this);
+				oRouter.navTo("detail", {
+					bookId: window.encodeURIComponent(this.getView().getElementBinding("books").getPath().substr(1))
+				});	
+			}
+			
 		}
 
 	});

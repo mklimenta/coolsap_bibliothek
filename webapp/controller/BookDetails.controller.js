@@ -10,7 +10,6 @@ sap.ui.define([
 		onInit: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
-			oRouter.getRoute("edit").attachPatternMatched(this._onObjectMatched, this);
 			
 		},
 
