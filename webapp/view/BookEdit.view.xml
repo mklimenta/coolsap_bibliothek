@@ -6,59 +6,66 @@
 				<content>
 					<form:SimpleForm editable="true">
 						<Label text="ISBN" tooltip="ISBN"/>
-						<MaskInput  mask="9999-9999-9" placeholder="Enter ISBN" id="isbn" value="{books>isbn}"/>
+						<Input
+		                    placeholder="Enter ISBN"
+		                	id="isbn"
+		                	value="{path: 'books>isbn', mode: 'OneWay'}"
+		                    valueLiveUpdate="true"
+		                    width="100%"/>
 						<Label text="Title" tooltip="Title"/>
 						<Input
 		                    placeholder="Enter title"
-		                	id="title" 
-		                	value="{books>title}"
+		                	id="title"
+		                	value="{path: 'books>title', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
 						<Label text="Author" tooltip="Author"/>
 						<Input
 		                    placeholder="Enter author"
-		                    value="{books>author}"
+		                    value="{path: 'books>author', mode: 'OneWay'}"
 		                	id="author" 
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
 						<Label text="Year" tooltip="Year"/>
 						<Input
 		                    placeholder="Enter publishing year"
-		                	id="year" 
-		                	value="{books>year}"
+		                	id="year"
+		                	value="{path: 'books>year', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
 						<Label text="Edition" tooltip="Edition"/>
 						<Input
 		                    placeholder="Enter edition number"
-		                	id="edition" 
-		                	value="{books>edition}"
+		                	id="edition"
+		                	value="{path: 'books>edition', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
 						<Label text="Publisher" tooltip="Publisher"/>
 						<Input
 		                    placeholder="Enter publisher name"
-		                	id="publisher" 
-		                	value="{books>publisher}"
+		                	id="publisher"
+		                	value="{path: 'books>publisher', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
 						<Label text="Language" tooltip="Language"/>
-						<Select  id="language">
-							<core:Item text="English" />
-							<core:Item text="German" />
-						</Select>
+						<Input
+		                    placeholder="Enter book language"
+		                	id="language"
+		                	value="{path: 'books>language', mode: 'OneWay'}"
+		                    valueLiveUpdate="true"
+		                    width="100%"/>
 						<Label text="Category" tooltip="Category"/>
-						<Select id="category">
-							<core:Item text="Philosophy" />
-							<core:Item text="Medicine" />
-							<core:Item text="Psychology" />
-							<core:Item text="IT" />
-						</Select>
+						<Input
+		                    placeholder="Enter category"
+		                	id="category"
+		                	value="{path: 'books>category', mode: 'OneWay'}"
+		                    valueLiveUpdate="true"
+		                    width="100%"/>
 						<Label text="Available" tooltip="Available"/>
 						<Input
 		                    placeholder="Enter amount"
 		                	id="available_count" 
-		                	value="{books>available_count}"
+		                	value="{path: 'books>available_count', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
 						<ToolbarSpacer/>
