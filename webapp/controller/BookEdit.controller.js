@@ -2,8 +2,9 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	'sap/ui/model/json/JSONModel',
 	"sap/ui/core/UIComponent",
-	"sap/ui/core/routing/History"
-], function(Controller, JSONModel, UIComponent, History) {
+	"sap/ui/core/routing/History",
+	"sap/m/MessageToast"
+], function(Controller, JSONModel, UIComponent, History, MessageToast) {
 	"use strict";
 
 	return Controller.extend("net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookEdit", {
@@ -44,6 +45,8 @@ sap.ui.define([
 			oModel.setProperty(elementPath + "/category", category);
 			oModel.setProperty(elementPath + "/available_count", available);
 			
+			MessageToast.show("Book saved");
+			
 			var oHistory = History.getInstance();
 			var sPreviousHash = oHistory.getPreviousHash();
 			if (sPreviousHash !== undefined) {
@@ -54,7 +57,6 @@ sap.ui.define([
 					bookId: window.encodeURIComponent(this.getView().getElementBinding("books").getPath().substr(1))
 				});	
 			}
-			
 		},
 		
 		onBack: function(oEvent){

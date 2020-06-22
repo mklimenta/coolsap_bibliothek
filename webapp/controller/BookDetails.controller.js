@@ -2,8 +2,9 @@ sap.ui.define([
 	'sap/ui/core/mvc/Controller',
 	'sap/ui/model/json/JSONModel',
 	"sap/ui/core/UIComponent",
-	"sap/ui/core/routing/History"
-], function(Controller, JSONModel, UIComponent, History) {
+	"sap/ui/core/routing/History",
+	"sap/m/MessageToast"
+], function(Controller, JSONModel, UIComponent, History, MessageToast) {
 	"use strict";
 
 	return Controller.extend("net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookDetails", {
@@ -22,11 +23,17 @@ sap.ui.define([
 		},
 
 		onBorrow: function(oEvent) {
-			this._updateModel(-1, +1);
+			var updated = this._updateModel(-1, +1);
+			if(updated) {
+			    MessageToast.show("Book borrowed");
+			}
 		},
 
 		onReturn: function(oEvent) {
-			this._updateModel(+1, -1);
+			var updated = this._updateModel(+1, -1);
+			if(updated) {
+			    MessageToast.show("Book returned");
+			}
 		},
 
 		_updateModel: function(available, lent) {
@@ -39,7 +46,9 @@ sap.ui.define([
 			if ((availableProperty + available) >= 0 && (lentProperty + lent) >= 0) {
 				oModel.setProperty(availablePath, availableProperty + available);
 				oModel.setProperty(lentPath, lentProperty + lent);
+				return true;
 			}
+			return false;
 		},
 		
 		onEntryPress: function(oEvent){

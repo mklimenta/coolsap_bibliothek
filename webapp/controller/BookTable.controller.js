@@ -3,8 +3,9 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
-	"sap/ui/core/Fragment"
-], function(Controller, JSONModel, Filter, FilterOperator, Fragment) {
+	"sap/ui/core/Fragment",
+	"sap/m/MessageToast"
+], function(Controller, JSONModel, Filter, FilterOperator, Fragment, MessageToast) {
 	"use strict";
 
 	return Controller.extend("net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookTable", {
@@ -84,6 +85,8 @@ sap.ui.define([
 				model.setData(localdata, true);
 				/* eslint no-console: "error" */
 				console.log(model.getData());
+				
+				MessageToast.show("Book added");
 		
 				this._getDialog().close();
 			},
