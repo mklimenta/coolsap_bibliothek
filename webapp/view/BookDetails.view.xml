@@ -5,16 +5,16 @@
 			<Page title="{i18n>bookDetailsTitle}">
 				<content>
 					<List>
-						<DisplayListItem label="ISBN" value="{books>isbn}"/>
-						<DisplayListItem label="Title" value="{books>title}"/>
-						<DisplayListItem label="Author" value="{books>author}"/>
-						<DisplayListItem label="Year" value="{books>year}"/>
-						<DisplayListItem label="Edition" value="{books>edition}"/>
-						<DisplayListItem label="Publisher" value="{books>publisher}"/>
-						<DisplayListItem label="Language" value="{books>language}"/>
-						<DisplayListItem label="Category" value="{books>category}"/>
-						<DisplayListItem label="Available Count" value="{books>available_count}"/>
-						<DisplayListItem label="Lent Count" value="{books>lent_count}"/>
+						<DisplayListItem label="{i18n>labelIsbn}" value="{books>isbn}"/>
+						<DisplayListItem label="{i18n>labelTitle}" value="{books>title}"/>
+						<DisplayListItem label="{i18n>labelAuthor}" value="{books>author}"/>
+						<DisplayListItem label="{i18n>labelYear}" value="{books>year}"/>
+						<DisplayListItem label="{i18n>labelEdition}" value="{books>edition}"/>
+						<DisplayListItem label="{i18n>labelPublisher}" value="{books>publisher}"/>
+						<DisplayListItem label="{i18n>labelLanguage}" value="{books>language}"/>
+						<DisplayListItem label="{i18n>labelCategory}" value="{books>category}"/>
+						<DisplayListItem label="{i18n>labelAvailble}" value="{books>available_count}"/>
+						<DisplayListItem label="{i18n>labelLent}" value="{books>lent_count}"/>
 					</List>
 					<Toolbar>
 						<Button

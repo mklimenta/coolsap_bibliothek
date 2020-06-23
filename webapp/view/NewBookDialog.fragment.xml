@@ -7,86 +7,76 @@
 		xmlns="sap.m"
 		xmlns:form="sap.ui.layout.form"
 		xmlns:mvc="sap.ui.core.mvc"
-		title="Add new Book"
+		title="{i18n>dialogAddNewBookTitle}"
 		contentHeight="100%"
 		contentWidth="40%"
 		stretch="{:= ${device>/system/phone}}">
    	    <content>
    	    	<form:SimpleForm editable="true">
-				<Label text="ISBN" tooltip="ISBN"/>
+				<Label text="{i18n>labelIsbn}" tooltip="ISBN"/>
 				<Input
 					type="Number"
 					required="true" 
-            		placeholder="Enter ISBN"
+            		placeholder="{i18n>dialogIsbnPlaceholder}"
                 	id="isbn" 
                 	valueLiveUpdate="true"
-                	value="{path: '/isbn',
-							type: 'sap.ui.model.type.String',
-							constraints: {
-							search: '^[0-9]*$'
-							}}"
                 	width="100%"/>
-				<Label text="Title" tooltip="Title"/>
+				<Label text="{i18n>labelTitle}" tooltip="Title"/>
 				<Input
 					required="true" 
-                    placeholder="Enter title"
+                    placeholder="{i18n>dialogTitlePlaceholder}"
                 	id="title" 
                     valueLiveUpdate="true"
                     width="100%"/>
-				<Label text="Author" tooltip="Author"/>
+				<Label text="{i18n>labelAuthor}" tooltip="Author"/>
 				<Input
 					required="true" 
-                    placeholder="Enter author"
+                    placeholder="{i18n>dialogAuthorPlaceholder}"
                 	id="author" 
                     valueLiveUpdate="true"
                     width="100%"/>
-				<Label text="Year" tooltip="Year"/>
+				<Label text="{i18n>labelYear}" tooltip="Year"/>
 				<Input
-                    placeholder="Enter publishing year"
+                    placeholder="{i18n>dialogYearPlaceholder}"
                 	id="year" 
                     valueLiveUpdate="true"
                     width="100%"/>
-				<Label text="Edition" tooltip="Edition"/>
+				<Label text="{i18n>labelEdition}" tooltip="Edition"/>
 				<Input
-                    placeholder="Enter edition number"
+                    placeholder="{i18n>dialogEditionPlaceholder}"
                 	id="edition" 
                     valueLiveUpdate="true"
                     width="100%"/>
-				<Label text="Publisher" tooltip="Publisher"/>
+				<Label text="{i18n>labelPublisher}" tooltip="Publisher"/>
 				<Input
-                    placeholder="Enter publisher name"
+                    placeholder="{i18n>dialogPublisherPlaceholder}"
                 	id="publisher" 
                     valueLiveUpdate="true"
                     width="100%"/>
-				<Label text="Language" tooltip="Language"/>
+				<Label text="{i18n>labelLanguag}e" tooltip="Language"/>
 				<Select  id="language">
 					<core:Item text="English" />
 					<core:Item text="German" />
 				</Select>
-				<Label text="Category" tooltip="Category"/>
+				<Label text="{i18n>labelCategory}" tooltip="Category"/>
 				<Select id="category">
 					<core:Item text="Philosophy" />
 					<core:Item text="Medicine" />
 					<core:Item text="Psychology" />
 					<core:Item text="IT" />
 				</Select>
-				<Label text="Available" tooltip="Available"/>
+				<Label text="{i18n>labelAvailable}" tooltip="Available"/>
 				<Input
 					type="Number"
 					required="true" 
-                    placeholder="Enter amount"
+                    placeholder="{i18n>dialogAmountPlaceholder}"
                 	id="available_count" 
                     valueLiveUpdate="true"
-                    value="{path: '/amount',
-							type: 'sap.ui.model.type.String',
-							constraints: {
-							search: '^[0-9]*$'
-							}}"
                     width="100%"/>
 			</form:SimpleForm>
    	    </content>
    	    <beginButton>
-   	    	<Button id="btn1" type="Accept" text="Save" press=".onAddBook" />
+   	    	<Button id="btn1" type="Accept" text="{i18n>dialogSaveButtonText}" press=".onAddBook" />
    	    </beginButton>
 		<endButton>
     		<Button
