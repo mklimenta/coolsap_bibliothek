@@ -15,13 +15,13 @@
 		</headerToolbar>
 		<columns>
 			<Column>
-				<Text text="Title"/>
+				<Text text="{i18n>labelTitle}"/>
 			</Column>
 			<Column>
-				<Text text="Author"/>
+				<Text text="{i18n>labelAuthor}"/>
 			</Column>
 			<Column>
-				<Text text="Available"/>
+				<Text text="{i18n>labelAvailable}"/>
 			</Column>
 		</columns>
 		<items>

@@ -34,29 +34,56 @@ sap.ui.define([
 			
 			var oModel = this.getOwnerComponent().getModel("books");
 			var elementPath = this.getView().getElementBinding("books").getPath();
+			var isbnInput = this.getView().byId("isbn");
+			var titleInput = this.getView().byId("title");
+			var authorInput = this.getView().byId("author");
+			var availableInput = this.getView().byId("available_count");
 			
-			oModel.setProperty(elementPath + "/isbn", isbn);
-			oModel.setProperty(elementPath + "/title", title);
-			oModel.setProperty(elementPath + "/author", author);
-			oModel.setProperty(elementPath + "/year", year);
-			oModel.setProperty(elementPath + "/edition", edition);
-			oModel.setProperty(elementPath + "/publisher", publisher);
-			oModel.setProperty(elementPath + "/language", language);
-			oModel.setProperty(elementPath + "/category", category);
-			oModel.setProperty(elementPath + "/available_count", available);
-			
-			MessageToast.show("Book saved");
-			
-			var oHistory = History.getInstance();
-			var sPreviousHash = oHistory.getPreviousHash();
-			if (sPreviousHash !== undefined) {
-				window.history.go(-1);
-			} else {
-				var oRouter = UIComponent.getRouterFor(this);
-				oRouter.navTo("detail", {
-					bookId: window.encodeURIComponent(this.getView().getElementBinding("books").getPath().substr(1))
-				});	
-			}
+			if(isbn === "" || isNaN(isbn))
+            {
+                isbnInput.setValueState(sap.ui.core.ValueState.Error);
+                return false;
+            }
+            else if(title === "") 
+            {
+            	titleInput.setValueState(sap.ui.core.ValueState.Error);
+                return false;
+            }
+            else if(author === "")
+            {
+            	authorInput.setValueState(sap.ui.core.ValueState.Error);
+                return false;
+            }
+            else if(available === "" || isNaN(available))
+            {
+            	availableInput.setValueState(sap.ui.core.ValueState.Error);
+                return false;
+            }
+            else 
+            {
+	            oModel.setProperty(elementPath + "/isbn", isbn);
+				oModel.setProperty(elementPath + "/title", title);
+				oModel.setProperty(elementPath + "/author", author);
+				oModel.setProperty(elementPath + "/year", year);
+				oModel.setProperty(elementPath + "/edition", edition);
+				oModel.setProperty(elementPath + "/publisher", publisher);
+				oModel.setProperty(elementPath + "/language", language);
+				oModel.setProperty(elementPath + "/category", category);
+				oModel.setProperty(elementPath + "/available_count", available);
+				
+				MessageToast.show("Book saved");
+				
+				var oHistory = History.getInstance();
+				var sPreviousHash = oHistory.getPreviousHash();
+				if (sPreviousHash !== undefined) {
+					window.history.go(-1);
+				} else {
+					var oRouter = UIComponent.getRouterFor(this);
+					oRouter.navTo("detail", {
+						bookId: window.encodeURIComponent(this.getView().getElementBinding("books").getPath().substr(1))
+					});	
+				}
+	        }
 		},
 		
 		onBack: function(oEvent){

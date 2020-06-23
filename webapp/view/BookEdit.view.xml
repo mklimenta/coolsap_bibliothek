@@ -5,65 +5,69 @@
 			<Page title="{i18n>bookEditTitle}">
 				<content>
 					<form:SimpleForm editable="true">
-						<Label text="ISBN" tooltip="ISBN"/>
+						<Label text="{i18n>labelIsbn}" tooltip="ISBN"/>
 						<Input
-		                    placeholder="Enter ISBN"
+		                    placeholder="{i18n>dialogIsbnPlaceholder}"
+		                    required = "true"
 		                	id="isbn"
 		                	value="{path: 'books>isbn', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
-						<Label text="Title" tooltip="Title"/>
+						<Label text="{i18n>labelTitle}" tooltip="Title"/>
 						<Input
-		                    placeholder="Enter title"
+		                    placeholder="{i18n>dialogTitlePlaceholder}"
+		                    required = "true"
 		                	id="title"
 		                	value="{path: 'books>title', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
-						<Label text="Author" tooltip="Author"/>
+						<Label text="{i18n>labelAuthor}" tooltip="Author"/>
 						<Input
-		                    placeholder="Enter author"
+		                    placeholder="{i18n>dialogAuthorPlaceholder}"
+		                    required = "true"
 		                    value="{path: 'books>author', mode: 'OneWay'}"
 		                	id="author" 
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
-						<Label text="Year" tooltip="Year"/>
+						<Label text="{i18n>labelYear}" tooltip="Year"/>
 						<Input
-		                    placeholder="Enter publishing year"
+		                    placeholder="{i18n>dialogYearPlaceholder}"
 		                	id="year"
 		                	value="{path: 'books>year', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
-						<Label text="Edition" tooltip="Edition"/>
+						<Label text="{i18n>labelEdition}" tooltip="Edition"/>
 						<Input
-		                    placeholder="Enter edition number"
+		                    placeholder="{i18n>dialogEditionPlaceholder}"
 		                	id="edition"
 		                	value="{path: 'books>edition', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
-						<Label text="Publisher" tooltip="Publisher"/>
+						<Label text="{i18n>labelPublisher}" tooltip="Publisher"/>
 						<Input
-		                    placeholder="Enter publisher name"
+		                    placeholder="{i18n>dialogPublisherPlaceholder}"
 		                	id="publisher"
 		                	value="{path: 'books>publisher', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
-						<Label text="Language" tooltip="Language"/>
+						<Label text="{i18n>labelLanguage}" tooltip="Language"/>
 						<Input
-		                    placeholder="Enter book language"
+		                    placeholder="{i18n>dialogLanguagePlaceholder}"
 		                	id="language"
 		                	value="{path: 'books>language', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
-						<Label text="Category" tooltip="Category"/>
+						<Label text="{i18n>labelCategory}" tooltip="Category"/>
 						<Input
-		                    placeholder="Enter category"
+		                    placeholder="{i18n>dialogCategoryPlaceholder}"
 		                	id="category"
 		                	value="{path: 'books>category', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
 		                    width="100%"/>
-						<Label text="Available" tooltip="Available"/>
+						<Label text="{i18n>labelAvailable}" tooltip="Available"/>
 						<Input
-		                    placeholder="Enter amount"
+		                    placeholder="{i18n>dialogAmountPlaceholder}"
+		                    required = "true"
 		                	id="available_count" 
 		                	value="{path: 'books>available_count', mode: 'OneWay'}"
 		                    valueLiveUpdate="true"
