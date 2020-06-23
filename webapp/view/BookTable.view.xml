@@ -1,38 +1,43 @@
 <mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="net.bounceme.monkeyCoolSAP-Bibliothek.controller.BookTable">
-	<Table id="bookTable" headerText="{i18n>bookTableTitle}" class="sapUiResponsiveMargin" width="auto"
-		items="{ path : 'books>/books', sorter : { path : 'category', group : true } }">
-		<headerToolbar>
-			<Toolbar>
-				<Title text="{i18n>bookTableTitle}"/>
-				<ToolbarSpacer/>
-				<Button
-					icon="sap-icon://add"
-        			text="{i18n>openDialogButtonText}"
-        			press=".onOpenDialog"
-            		class="sapUiSmallMarginEnd"/>
-				<SearchField width="25%" search=".onFilterBooks"/>
-			</Toolbar>
-		</headerToolbar>
-		<columns>
-			<Column>
-				<Text text="{i18n>labelTitle}"/>
-			</Column>
-			<Column>
-				<Text text="{i18n>labelAuthor}"/>
-			</Column>
-			<Column>
-				<Text text="{i18n>labelAvailable}"/>
-			</Column>
-		</columns>
-		<items>
-			<ColumnListItem press="onEntryPress" type="Navigation">
-				<cells>
-					<Text text="{books>title}"/>
-					<Text text="{books>author}"/>
-					<ObjectNumber number="{books>available_count}" unit="books"
-						state="{= 3 > ${books>available_count} ? 'Error' : 'Success' }"/>
-				</cells>
-			</ColumnListItem>
-		</items>
-	</Table>
+	
+	<ScrollContainer height='100%' vertical='true'>
+		<Table id="bookTable" headerText="{i18n>bookTableTitle}" class="sapUiResponsiveMargin" width="auto" inset="false"
+			items="{ path : 'books>/books', sorter : { path : 'category', group : true } }">
+			<headerToolbar>
+				<Toolbar>
+					<Title text="{i18n>bookTableTitle}"/>
+					<ToolbarSpacer/>
+					<Button
+						icon="sap-icon://add"
+	        			text="{i18n>openDialogButtonText}"
+	        			press=".onOpenDialog"
+	            		class="sapUiSmallMarginEnd"/>
+					<SearchField width="25%" search=".onFilterBooks"/>
+				</Toolbar>
+			</headerToolbar>
+			
+			<columns>
+				<Column>
+					<Text text="{i18n>labelTitle}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>labelAuthor}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>labelAvailable}"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem press="onEntryPress" type="Navigation">
+					<cells>
+						<Text text="{books>title}"/>
+						<Text text="{books>author}"/>
+						<ObjectNumber number="{books>available_count}" unit="books"
+							state="{= 3 > ${books>available_count} ? 'Error' : 'Success' }"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+			
+		</Table>
+	</ScrollContainer>
 </mvc:View>
