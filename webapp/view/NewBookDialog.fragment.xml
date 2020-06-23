@@ -1,7 +1,7 @@
 <core:FragmentDefinition
    xmlns="sap.m"
    xmlns:core="sap.ui.core"
-   xmlns:mvc="sap.ui.core.mvc" 
+   xmlns:mvc="sap.ui.core.mvc"
    id="fragment">
    <Dialog id="dialog"
 		xmlns="sap.m"
@@ -14,15 +14,28 @@
    	    <content>
    	    	<form:SimpleForm editable="true">
 				<Label text="ISBN" tooltip="ISBN"/>
-				<MaskInput  mask="9999-9999-9" placeholder="Enter ISBN" id="isbn"/>
+				<Input
+					type="Number"
+					required="true" 
+            		placeholder="Enter ISBN"
+                	id="isbn" 
+                	valueLiveUpdate="true"
+                	value="{path: '/isbn',
+							type: 'sap.ui.model.type.String',
+							constraints: {
+							search: '^[0-9]*$'
+							}}"
+                	width="100%"/>
 				<Label text="Title" tooltip="Title"/>
 				<Input
+					required="true" 
                     placeholder="Enter title"
                 	id="title" 
                     valueLiveUpdate="true"
                     width="100%"/>
 				<Label text="Author" tooltip="Author"/>
 				<Input
+					required="true" 
                     placeholder="Enter author"
                 	id="author" 
                     valueLiveUpdate="true"
@@ -59,9 +72,16 @@
 				</Select>
 				<Label text="Available" tooltip="Available"/>
 				<Input
+					type="Number"
+					required="true" 
                     placeholder="Enter amount"
                 	id="available_count" 
                     valueLiveUpdate="true"
+                    value="{path: '/amount',
+							type: 'sap.ui.model.type.String',
+							constraints: {
+							search: '^[0-9]*$'
+							}}"
                     width="100%"/>
 			</form:SimpleForm>
    	    </content>

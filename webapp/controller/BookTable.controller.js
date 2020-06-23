@@ -61,34 +61,61 @@ sap.ui.define([
 				var language = sap.ui.getCore().byId("language").getSelectedItem().getText();; 
 				var category = sap.ui.getCore().byId("category").getSelectedItem().getText();; 
 				var available_count = sap.ui.getCore().byId("available_count")._lastValue; 
-			
-				var model = this.getOwnerComponent().getModel("books");
-				var localdata = model.getData();
-				var jsonString = JSON.stringify(localdata);
-				
-				var moreData = [];
-				var oneMoreEntity= {};
-
-				oneMoreEntity['isbn']= isbn;
-				oneMoreEntity['title']= title;
-				oneMoreEntity['author']= author;
-				oneMoreEntity['year']= year;
-				oneMoreEntity['edition']= edition;
-				oneMoreEntity['publisher']= publisher;
-				oneMoreEntity['language']= language;
-				oneMoreEntity['category']= category;
-				oneMoreEntity['available_count']= available_count;
-				oneMoreEntity['lent_count']= 0;
-				
-				localdata.books.push(oneMoreEntity);
-				
-				model.setData(localdata, true);
-				/* eslint no-console: "error" */
-				console.log(model.getData());
-				
-				MessageToast.show("Book added");
 		
-				this._getDialog().close();
+				var isbnInput = sap.ui.getCore().byId("isbn"); 
+				var titleInput = sap.ui.getCore().byId("title");
+				var authorInput = sap.ui.getCore().byId("author");
+				var availableInput = sap.ui.getCore().byId("available_count"); 
+				
+				if(isbn === "" || isNaN(isbn))
+            	{
+                	isbnInput.setValueState(sap.ui.core.ValueState.Error);
+                	return false;
+            	}
+            	else if(title === "") 
+            	{
+            		titleInput.setValueState(sap.ui.core.ValueState.Error);
+                	return false;
+            	}
+            	else if(author === "")
+            	{
+            		authorInput.setValueState(sap.ui.core.ValueState.Error);
+                	return false;
+            	}
+            	else if(available_count === "" || isNaN(available_count))
+            	{
+            		availableInput.setValueState(sap.ui.core.ValueState.Error);
+                	return false;
+            	}
+            	else {
+            		var model = this.getOwnerComponent().getModel("books");
+					var localdata = model.getData();
+					var jsonString = JSON.stringify(localdata);
+					var isbn = this.getView().byId('isbn');
+					var moreData = [];
+					var oneMoreEntity= {};
+
+					oneMoreEntity['isbn']= isbn;
+					oneMoreEntity['title']= title;
+					oneMoreEntity['author']= author;
+					oneMoreEntity['year']= year;
+					oneMoreEntity['edition']= edition;
+					oneMoreEntity['publisher']= publisher;
+					oneMoreEntity['language']= language;
+					oneMoreEntity['category']= category;
+					oneMoreEntity['available_count']= available_count;
+					oneMoreEntity['lent_count']= 0;
+				
+					localdata.books.push(oneMoreEntity);
+            		model.setData(localdata, true);
+					
+					/* eslint no-console: "error" */
+					console.log(model.getData());
+				
+					MessageToast.show("Book added");
+		
+					this._getDialog().close();
+            	}
 			},
 			
 		onEntryPress: function(oEvent){
