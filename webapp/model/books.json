@@ -35,6 +35,114 @@
 			"category": "Psychology",
 			"available_count": 0,
 			"lent_count": 3
+		},
+		{
+			"isbn": "1609425162",
+			"title": "The Timaeus and The Critias",
+			"author": "Plato",
+			"year": 2019,
+			"edition": "1",
+			"publisher": "IAP",
+			"language": "English",
+			"category": "Philosophy",
+			"available_count": 7,
+			"lent_count": 0
+		},
+		{
+			"isbn": "0387968245",
+			"title": "Introduction to Analysis of the Infinite: Book I",
+			"author": "Leonard Euler",
+			"year": 1988,
+			"edition": "1988",
+			"publisher": "Springer",
+			"language": "English",
+			"category": "Mathematics",
+			"available_count": 3,
+			"lent_count": 23
+		},
+		{
+			"isbn": "3836267217",
+			"title": "Java ist auch eine Insel",
+			"author": "Christian Ullenboom",
+			"year": 2018,
+			"edition": "14",
+			"publisher": "Rheinwerk Computing",
+			"language": "German",
+			"category": "IT",
+			"available_count": 42,
+			"lent_count": 5
+		},
+		{
+			"isbn": "1492032646",
+			"title": "Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+			"author": "Aurélien Géron",
+			"year": 2019,
+			"edition": "2",
+			"publisher": "O'Reilly UK Ltd",
+			"language": "English",
+			"category": "IT",
+			"available_count": 13,
+			"lent_count": 6
+		},
+		{
+			"isbn": "3836267888",
+			"title": "ABAP-Entwicklung für SAP S/4HANA",
+			"author": "Sebastian Freilinger-Huber & Constantin-Catalin Chiuaru",
+			"year": 2019,
+			"edition": "1",
+			"publisher": "SAP PRESS",
+			"language": "German",
+			"category": "IT",
+			"available_count": 16,
+			"lent_count": 8
+		},
+		{
+			"isbn": "3868204865",
+			"title": "Also sprach Zarathustra",
+			"author": "Friedrich Nietzsche",
+			"year": 2019,
+			"edition": "1",
+			"publisher": "Nikol",
+			"language": "German",
+			"category": "Philosophy",
+			"available_count": 5,
+			"lent_count": 0
+		},
+		{
+			"isbn": "1473969301",
+			"title": "Social Cognition",
+			"author": "Susan T. Fiske",
+			"year": 2016,
+			"edition": "3",
+			"publisher": "SAGE Publications Ltd",
+			"language": "English",
+			"category": "Psychology",
+			"available_count": 3,
+			"lent_count": 6
+		},
+		{
+			"isbn": "3319110799",
+			"title": "Linear Algebra Done Right",
+			"author": "Sheldon Axler",
+			"year": 2014,
+			"edition": "3",
+			"publisher": "Springer",
+			"language": "English",
+			"category": "Mathematics",
+			"available_count": 19,
+			"lent_count": 9
+		},
+		{
+			"isbn": "1523318678",
+			"title": "Probability",
+			"author": "David J. Morin",
+			"year": 2016,
+			"edition": "1",
+			"publisher": "CreateSpace Independent Publishing Platform",
+			"language": "English",
+			"category": "Mathematics",
+			"available_count": 24,
+			"lent_count": 3
 		}
 	]
 }
